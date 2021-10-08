@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #f00202, #f17603);
+}
+
+.container-card{
+    background-color: #ffffff73;
+    min-height: 350px;
+    width: 400px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 32px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.title{
+    margin: 25px 1px;
+    font-size: 1.8rem;
+    color: #141212e8;
+}
+
+.conteiner-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#seleciona-temperatura,
+#insere-temperatura{
+    height: 35px;
+    width: 70%;
+    box-sizing: border-box;
+    padding-left: 30px;
+    border: unset;
+    outline: none;
+    background-color: #ffffff73;
+}
+
+/* .login-input-border{
+    height: 1px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #cfcfcf;
+    transition: .3s ease-in-out;
+} */
+
+.login-input-border::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: linear-gradient(120deg, #0a1970, #df06dfd2);
+    transition: .3s ease-in-out;
+}
+
+.converte{
+    height: 48px;
+    width: 100%;
+    outline: none;
+    background: linear-gradient(120deg, #f00202, #f17603);
+    background-size: 200%;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    color: #0f0a0a;
+    font-weight: bolder;
+ }
+
+.resultado{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #ffff;
+    background: linear-gradient(120deg, #f00202, #f17603);
+    background-size: 300%;
+    padding: 0 100px;
+}
