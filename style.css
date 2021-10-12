@@ -14,7 +14,7 @@
 .container-card{
     background-color: #ffffff73;
     min-height: 350px;
-    width: 400px;
+    width: 480px;
     border-radius: 8px;
     box-sizing: border-box;
     padding: 32px;
@@ -22,7 +22,7 @@
 }
 
 .title{
-    margin: 25px 1px;
+    margin: 25px 41px;
     font-size: 1.8rem;
     color: #141212e8;
 }
@@ -77,18 +77,22 @@
     border: unset;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-input-placeholder {
     color: #0f0a0a;
-    font-weight: bolder;
+    /* font-weight: bolder; */
  }
 
 .resultado{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bolder;
     color: #ffff;
     background: linear-gradient(120deg, #f00202, #f17603);
     background-size: 300%;
     padding: 0 100px;
+    width: 15rem;
+    height: 2rem;
+    padding-top: 1rem;
 }
