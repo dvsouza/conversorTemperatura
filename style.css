@@ -27,6 +27,13 @@
     color: #141212e8;
 }
 
+.sub-title{
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    color: #141212e8;
+}
+
 .conteiner-formulario{
     display: flex;
     flex-direction: column;
@@ -86,13 +93,14 @@
  }
 
 .resultado{
-    font-size: 1rem;
+    font-size: 1.7rem;
     font-weight: bolder;
-    color: #ffff;
-    background: linear-gradient(120deg, #f00202, #f17603);
-    background-size: 300%;
-    padding: 0 100px;
-    width: 15rem;
+    text-align: center;
+    color: #f00202;
+    /* background: linear-gradient(120deg, #f00202, #f17603); */
+    /* background-size: 300%;
+    padding: 0 100px; */
+    width: 30rem;
     height: 2rem;
-    padding-top: 1rem;
+    margin-bottom: 1rem;
 }

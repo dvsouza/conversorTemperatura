@@ -11,17 +11,19 @@
     <main class="conteiner-conteudo">
         <div class="container-card">
             <h1 class="title">Conversor de Temperatura</h1>
+            <p class="sub-title">Escolha para qual temperatura deseja converter</p>
             <form class="conteiner-formulario">
                 <select id="seleciona-temperatura" onchange="getSelectValue()">
-                    <option selected disabled value="1">Selecione</option>
-                    <option value="fahrenheit">Fahrenheit->Celsius</option>
-                    <option value="celsius">Celsius->Fahrenheit</option>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="celsius">Celsius</option>
                 </select>
                 <span class="login-input-border"></span>
                 <input type="number" name="insere-temperatura" id="insere-temperatura" placeholder="Temperatura para converter">
                 <span class="login-input-border"></span>
                 <button class="converte" onclick="botaoConversor()">Converter</button>
                 <div class="valorConvertido">
+                    <p class="resultado"></p>
                 </div>
             </form>
         </div>

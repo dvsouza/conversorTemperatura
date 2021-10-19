@@ -1,40 +1,37 @@
-// var botaoConversor = document.querySelector(".converte");
-var temperaturaInformada = document.querySelector("#insere-temperatura");
-var selectValue = null;
-var fahrenheit = null;
+var temperaturaInformada = document.getElementById("insere-temperatura");
+var novaTemperatura = document.querySelector(".resultado");
 
 function getSelectValue(){
-    selectValue = document.getElementById("seleciona-temperatura").value;
+    var selectValue = document.getElementById("seleciona-temperatura").value;
     return selectValue;
 }
 
 function calculaConversao(temperatura){
-        fahrenheit = temperatura.value * 1.8 + 32;
+    if (getSelectValue() == 'fahrenheit') {
+        var fahrenheit = temperatura.value * 1.8 + 32;
         return fahrenheit;
-}
-
-function criaElemento(){
-    var divResultado = document.querySelector(".valorConvertido");
-    var resultadoConvertido = document.createElement("p");
-    resultadoConvertido.setAttribute("class", "resultado");
-    var elementoResultado = divResultado.appendChild(resultadoConvertido);
-    return elementoResultado;
+    } else {
+        var celsius = (temperatura.value - 32) / 1.8;
+        return celsius
+    }
 }
 
 function insereNaTela(){
-    var retornoTela = "A temperatura em " + selectValue + " é de " + calculaConversao(temperaturaInformada);
-    var novaTemperatura = criaElemento();
+    var retornoTela = "A temperatura em " + getSelectValue() + " é de " + calculaConversao(temperaturaInformada);
     novaTemperatura.innerHTML = retornoTela;
+    return novaTemperatura;
 }
-
-
-// botaoConversor.addEventListener("click", function(event){
-//     event.preventDefault();
-//     insereNaTela();
-// })
 
 function botaoConversor(){
     event.preventDefault();
-    insereNaTela();
+    var validaValor = temperaturaInformada.value;
+    if (validaValor | getSelectValue()) {
+        insereNaTela();
+    } else {
+        novaTemperatura.innerHTML = "Selecione uma temperatura ou insira uma temperatura"
+    }
+
+    console.log(getSelectValue());
+    
 }
 
